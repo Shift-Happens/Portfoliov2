@@ -88,12 +88,12 @@
         <div class="project-cs-hero__info">
           <p class="text-primary">
             I have trained a YOLO (You Only Look Once) model on Google Colaboratory to detect cats in images. 
-            The YOLO algorithm is a popular object detection method that can accurately identify objects within an image while also providing their bounding box coordinates.
+            The YOLO algorithm is a popular object detection method that can accurately identify objects within an image while also providing their bounding box coordinates. For more information, read full case study below.
           </p>
         </div>
-        <!-- <div class="project-cs-hero__cta">
-          <a href="#" class="btn btn--bg" target="_blank">Live Link</a>
-        </div> -->
+        <div class="project-cs-hero__cta">
+          <a href="https://github.com/Shift-Happens/YOLOv3_CatDetector" class="btn btn--bg" target="_blank">GitHub Link</a>
+        </div>
       </div>
     </section>
     <section class="project-details">
@@ -101,10 +101,16 @@
         <div class="project-details__content">
           <div class="project-details__showcase-img-cont">
             <img
-              src="./assets/jpeg/project_2/cat_detection.jpg"
+              src="./assets/jpeg/project_2/cat_detection2.jpg"
               alt="Cat detected by AI model"
               class="project-details__showcase-img"
             />
+          </div>
+          <!-- <img
+              src="./assets/jpeg/project_2/photo2.jpg"
+              alt="Cat detected by AI model"
+              class="project-details__showcase-img"
+            /> -->
           </div>
           <div class="project-details__content-main">
             <div class="project-details__desc">
@@ -123,10 +129,29 @@
                 Another issue is underfitting, which occurs when the model is too simple and is unable to accurately fit the training data. 
                 Additionally, the quality and size of the dataset can also greatly impact the performance of the model.
               </p>
+              <h3 class="project-details__content-title">Case Study:</h3>
               <p class="project-details__desc-para">
-                Inspired by this article and my friend: 
-                <div class="project-cs-hero__cta">
-                <a href="https://pysource.com/2020/04/02/train-yolo-to-detect-a-custom-object-online-with-free-gpu/" class="btn btn--bg" target="_blank">Article Link</a>
+                In my training of the YOLO model, I used the Darknet framework, which is an open-source neural network framework written in C and CUDA. 
+                To stich it all together, I used Google Colaboratory, which is a free cloud service that allows you to write and execute Python in your browser. 
+                It has powerful hardware and is a great tool for training AI models (even with the free version). I've opted to use the free version of Google Colaboratory, which provides 12 hours of GPU runtime per day.
+
+                I've manually downloaded over 390 sample photos of cats in various poses and backgrounds. 
+                Loaded them up into LabelImg, which is a graphical image annotation tool, and labeled them as "cat" class. 
+              </p>
+              <p class="project-details__desc-para">
+                After that, I've split the dataset into 80% training and 20% validation. Loaded them up into Google Drive and mounted it to Google Colaboratory. The first model was trained for 2000 epochs, which took about 4 hours.
+                The results were not very good, so I've decided to train the model for 5000 epochs, which took about 10 hours. 
+                The results were much better, but still not perfect. Sometimes some innacurate detections were made. 
+                For example, the model sometimes detected a cat in a picture of a dog or another animal. Overall the results were pretty good - regarding this is my first time training a model. 
+                I've learned a lot about the process of training an AI model and how to avoid some common pitfalls, it was not as simple as it seemed. I'd recommend anyone who is interested in AI to try training their own model and see how it comes out.                        
+              </p>
+
+              <p class="project-details__desc-para">
+                I was inspired to try training my own AI model by my friend Piotr and the article below:
+                
+                <div class="project-details__links">
+                  <a href="https://github.com/Koks-creator" class="btn btn--med btn--theme project-details__links-btn" target="_blank">Piotr's GitHub</a>
+                  <a href="https://pysource.com/2020/04/02/train-yolo-to-detect-a-custom-object-online-with-free-gpu/" class="btn btn--med btn--theme-inv project-details__links-btn" target="_blank">Article Link</a>
                 </div>
               </p>
             </div>
@@ -135,10 +160,10 @@
               <div class="skills">
                 <div class="skills__skill">Python</div>
                 <div class="skills__skill">Google Collaborator</div>
-                <!-- <div class="skills__skill">JavaScript</div>
-                <div class="skills__skill">React</div>
-                <div class="skills__skill">SASS</div>
-                <div class="skills__skill">GIT</div>
+                <div class="skills__skill">Google Drive</div>
+                <div class="skills__skill">GitHub</div>
+                <div class="skills__skill">labelImg</div>
+                <!-- <div class="skills__skill">GIT</div>
                 <div class="skills__skill">Shopify</div>
                 <div class="skills__skill">Wordpress</div>
                 <div class="skills__skill">Google ADS</div>
@@ -147,7 +172,31 @@
                 <div class="skills__skill">IOS</div> -->
               </div>
             </div>
-            <!-- <div class="project-details__links">
+            <div class="project-details__content">
+              <h3 class="project-details__content-title">Screenshot Gallery</h3>
+              <div class="project-details__showcase-img-cont">
+                <img
+                  src="./assets/jpeg/project_2/photo.jpg"
+                  alt="Cat detected by AI model"
+                  class="project-details__showcase-img"
+                />
+                <img
+                  src="./assets/jpeg/project_2/photo2.jpg"
+                  alt="Cat detected by AI model"
+                  class="project-details__showcase-img"
+                />
+                <img
+                  src="./assets/jpeg/project_2/photo3.jpg"
+                  alt="Cat detected by AI model"
+                  class="project-details__showcase-img"
+                />
+                <img
+                  src="./assets/jpeg/project_2/photo4.jpg"
+                  alt="Cat detected by AI model"
+                  class="project-details__showcase-img"
+                />
+              </div>
+              <!-- <div class="project-details__links">
               <h3 class="project-details__content-title">See Live</h3>
               <a
                 href="#"
@@ -218,9 +267,8 @@
             </p>
           </div>
         </div>
-
         <div class="main-footer__lower">
-          &copy; Copyright 2021. Made by
+          &copy; Copyright 2023. Made by Arkadiusz Kubiszewski, inspired by
           <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com"
             >Ram Maheshwari</a
           >
